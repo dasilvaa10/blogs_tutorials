@@ -104,7 +104,7 @@ head(x,5)
 
 ### **Now, the fun begins**
 
-We'll first start by finding our beta coefficients.  In order to do this, we need to take the inverse of X transpose X and multiply that by X tranpose Y.  Put more readably: \\( b = (X^TX)^{-1}X^TY \\).  Below, we'll begin by creating our <a href="https://www.codecogs.com/eqnedit.php?latex=X^TX" target="_blank"><img src="https://latex.codecogs.com/gif.latex?X^TX" title="X^TX" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=X^TY" target="_blank"><img src="https://latex.codecogs.com/gif.latex?X^TY" title="X^TY" /></a> matrices.
+We'll first start by finding our beta coefficients.  In order to do this, we need to take the inverse of X transpose X and multiply that by X tranpose Y.  Put more readably: <a href="https://www.codecogs.com/eqnedit.php?latex=b&space;=&space;(X^TX)^{-1}X^TY" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b&space;=&space;(X^TX)^{-1}X^TY" title="b = (X^TX)^{-1}X^TY" /></a>.  Below, we'll begin by creating our <a href="https://www.codecogs.com/eqnedit.php?latex=X^TX" target="_blank"><img src="https://latex.codecogs.com/gif.latex?X^TX" title="X^TX" /></a> and <a href="https://www.codecogs.com/eqnedit.php?latex=X^TY" target="_blank"><img src="https://latex.codecogs.com/gif.latex?X^TY" title="X^TY" /></a> matrices.
 
 ``` r
 XtX<-t(x)%*%x
@@ -112,7 +112,7 @@ XtX<-t(x)%*%x
 XtY<-t(x)%*%y
 ```
 
-Before calculating our regression coefficients, let's pause for a second and check out this \\(X^TX \\) matrix. On the diagonal, you'll find the sum squared values for our predictors and on the off-diagonal you'll find the cross-products. To illustrate, we will calculate the sum of squares for hp and the cross product between hp and disp.  You can see these values also appear in the appropriate spot in the \\(X^TX \\) matrix.
+Before calculating our regression coefficients, let's pause for a second and check out this <a href="https://www.codecogs.com/eqnedit.php?latex=X^TX" target="_blank"><img src="https://latex.codecogs.com/gif.latex?X^TX" title="X^TX" /></a> matrix. On the diagonal, you'll find the sum squared values for our predictors and on the off-diagonal you'll find the cross-products. To illustrate, we will calculate the sum of squares for hp and the cross product between hp and disp.  You can see these values also appear in the appropriate spot in the <a href="https://www.codecogs.com/eqnedit.php?latex=X^TX" target="_blank"><img src="https://latex.codecogs.com/gif.latex?X^TX" title="X^TX" /></a> matrix.
 
 ``` r
 print(XtX)
@@ -135,7 +135,7 @@ sum(mtcars$hp*mtcars$disp)
 
     ## [1] 1291364
 
-The \\(X^TY \\) matrix will take a bit of a different form as it will always be a vector of length n (number of covariates) + 1 (intercept), but you can still find the cross-products as seen below with respect to mpg and hp.
+The <a href="https://www.codecogs.com/eqnedit.php?latex=X^TY" target="_blank"><img src="https://latex.codecogs.com/gif.latex?X^TY" title="X^TY" /></a> matrix will take a bit of a different form as it will always be a vector of length n (number of covariates) + 1 (intercept), but you can still find the cross-products as seen below with respect to mpg and hp.
 
 ``` r
 print(XtY)
@@ -154,7 +154,7 @@ sum(mtcars$hp*mtcars$mpg)
 
 ### **Back to betas**
 
-Alright, time to calculate some regression coefficients.  As mentioned earlier, \\(b = (X^TX)^{-1}X^TY \\). At this point, we have everything ready to plug into that formula, so we will go ahead and do so.  Just to ensure that I'm not lying to you, we will compare out resulting calculation to that of lm.
+Alright, time to calculate some regression coefficients.  As mentioned earlier, <a href="https://www.codecogs.com/eqnedit.php?latex=b&space;=&space;(X^TX)^{-1}X^TY" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b&space;=&space;(X^TX)^{-1}X^TY" title="b = (X^TX)^{-1}X^TY" /></a>. At this point, we have everything ready to plug into that formula, so we will go ahead and do so.  Just to ensure that I'm not lying to you, we will compare out resulting calculation to that of lm.
 
 ``` r
 betas<-solve(XtX)%*%XtY
@@ -174,7 +174,7 @@ summary(lm(mpg ~ hp + disp,data=mtcars))$coefficients[1:3]
 
 ### **Put a hat on it**
 
-Now, we are going to compute something a little funky known as the hat matrix or projection matrix.  This matrix is known as the hat matrix because it's going to allow us map \\(y \\) into \\(\hat{y} \\).  To find this hat matrix we need to use the following formula: \\(H = X(X^TX)^{-1}X^T \\). Once we have calculated the hat matrix, we multiple it by y to find our predicted values.  We will do so, and compare our results to lm below:
+Now, we are going to compute something a little funky known as the hat matrix or projection matrix.  This matrix is known as the hat matrix because it's going to allow us map <a href="https://www.codecogs.com/eqnedit.php?latex=b&space;=&space;(X^TX)^{-1}X^TY" target="_blank"><img src="https://latex.codecogs.com/gif.latex?b&space;=&space;(X^TX)^{-1}X^TY" title="b = (X^TX)^{-1}X^TY" /></a> into <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{y}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{y}" title="\hat{y}" /></a>.  To find this hat matrix we need to use the following formula: \\(H = X(X^TX)^{-1}X^T \\). Once we have calculated the hat matrix, we multiple it by y to find our predicted values.  We will do so, and compare our results to lm below:
 
 ``` r
 hat_matrix<- x%*%solve(XtX)%*%t(x)
@@ -204,7 +204,7 @@ ggplot(data=data.frame(our_predicted=residuals,lm_predicted=lm(mpg ~ hp + disp,d
 
 ### **An Estimate of Error**
 
-We can now use the residuals we've calculated to help us find the standard errors of our beta estimates.  We can accomplish this by first finding the variance-covariance matrix between the regression coefficients.  The formula to do so is: \\(var(\hat{B}) = {\sigma^2}(X^TX)^{-1}\\).  To proceed we need to estimate \\(\sigma^2\\). To estimate \\(\hat{\sigma^2}\\) we can use the following formula \\(\hat{\sigma^2} = \dfrac{1}{N-p}(r^Tr)\\) where r is our vector of residuals, N = number of observations and p = number of columns in the design matrix (inctercept included).  Once we have an estimate of variance, we can plug it in to the first formula to obtain our variance co-variance matrix.  Once we have that, we can take the square root of its diaganol to obtain our standard errors. As usual, we will compare our calculations to "lm".
+We can now use the residuals we've calculated to help us find the standard errors of our beta estimates.  We can accomplish this by first finding the variance-covariance matrix between the regression coefficients.  The formula to do so is: <a href="https://www.codecogs.com/eqnedit.php?latex=var(\hat{B})&space;=&space;{\sigma^2}(X^TX)^{-1}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?var(\hat{B})&space;=&space;{\sigma^2}(X^TX)^{-1}" title="var(\hat{B}) = {\sigma^2}(X^TX)^{-1}" /></a>.  To proceed we need to estimate \\(\sigma^2\\). To estimate <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma^2" title="\sigma^2" /></a> we can use the following formula <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\sigma^2}&space;=&space;\dfrac{1}{N-p}(r^Tr)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\sigma^2}&space;=&space;\dfrac{1}{N-p}(r^Tr)" title="\hat{\sigma^2} = \dfrac{1}{N-p}(r^Tr)" /></a> where r is our vector of residuals, N = number of observations and p = number of columns in the design matrix (inctercept included).  Once we have an estimate of variance, we can plug it in to the first formula to obtain our variance co-variance matrix.  Once we have that, we can take the square root of its diaganol to obtain our standard errors. As usual, we will compare our calculations to "lm".
 
 ``` r
 var_est <- (1/(nrow(x)-ncol(x)))*t(residuals)%*%residuals
