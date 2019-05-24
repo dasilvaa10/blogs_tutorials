@@ -13,7 +13,7 @@ Social science researchers usually hear about eigenvalues and eigenvectors somew
 
 In short, by way of stretching or compressing, eigenvectors are the axes along which a linear transformation acts. The factors by which this transformation occurs are eigenvalues.<a href="https://www.codecogs.com/eqnedit.php?latex=^1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?^1" title="^1" /></a> 
 
-\\(A \\) is a nXn matrix (often a correlation or variance-covariance matrix), <a href="https://www.codecogs.com/eqnedit.php?latex={\lambda}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\lambda}" title="{\lambda}" /></a> is an *eigenvalue* of <a href="https://www.codecogs.com/eqnedit.php?latex=A" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A" title="A" /></a>, and <a href="https://www.codecogs.com/eqnedit.php?latex=x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x" title="x" /></a> is a vector (*eigenvector*) of<a href="https://www.codecogs.com/eqnedit.php?latex=A" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A" title="A" /></a> in relation to <a href="https://www.codecogs.com/eqnedit.php?latex={\lambda}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\lambda}" title="{\lambda}" /></a> whereby:
+<a href="https://www.codecogs.com/eqnedit.php?latex=A" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A" title="A" /></a> is a nXn matrix (often a correlation or variance-covariance matrix), <a href="https://www.codecogs.com/eqnedit.php?latex={\lambda}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\lambda}" title="{\lambda}" /></a> is an *eigenvalue* of <a href="https://www.codecogs.com/eqnedit.php?latex=A" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A" title="A" /></a>, and <a href="https://www.codecogs.com/eqnedit.php?latex=x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x" title="x" /></a> is a vector (*eigenvector*) of<a href="https://www.codecogs.com/eqnedit.php?latex=A" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A" title="A" /></a> in relation to <a href="https://www.codecogs.com/eqnedit.php?latex={\lambda}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\lambda}" title="{\lambda}" /></a> whereby:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=Ax" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Ax" title="Ax" /></a> = <a href="https://www.codecogs.com/eqnedit.php?latex={\lambda&space;x}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\lambda&space;x}" title="{\lambda x}" /></a>
 
@@ -25,7 +25,7 @@ We can reform the above equation as:
 
 For this example, we will work with the following 2x2 matrix:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;4&space;&&space;6&space;\\&space;3&&space;1&space;\end{bmatrix}" target="_blank"><img .
+<a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;4&space;&&space;6\\&space;3&space;&&space;1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;4&space;&&space;6\\&space;3&space;&&space;1&space;\end{bmatrix}" title="\begin{bmatrix} 4 & 6\\ 3 & 1 \end{bmatrix}" /></a>
 
 As we are working with a 2x2 matrix the <a href="https://www.codecogs.com/eqnedit.php?latex={\lambda&space;I}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\lambda&space;I}" title="{\lambda I}" /></a> will take the following form:
 
@@ -39,9 +39,9 @@ We'll take our matrix<a href="https://www.codecogs.com/eqnedit.php?latex=A" targ
 
 Next, we need to find the determinant of <a href="https://www.codecogs.com/eqnedit.php?latex=A&space;-&space;{\lambda&space;I}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A&space;-&space;{\lambda&space;I}" title="A - {\lambda I}" /></a> and set it equal to 0:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=(4&space;-&space;{\lambda&space;})(1-{\lambda})&space;-18=" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(4&space;-&space;{\lambda&space;})(1-{\lambda})&space;-18=" title="(4 - {\lambda })(1-{\lambda}) -18=" /></a> = <br />
+<a href="https://www.codecogs.com/eqnedit.php?latex=(4&space;-&space;{\lambda&space;})(1-{\lambda})&space;-18=" target="_blank"><img src="https://latex.codecogs.com/gif.latex?(4&space;-&space;{\lambda&space;})(1-{\lambda})&space;-18=" title="(4 - {\lambda })(1-{\lambda}) -18=" /></a> <br />
 
-<a href="https://www.codecogs.com/eqnedit.php?latex={\lambda&space;}^2&space;-5&space;{\lambda}&space;-&space;14&space;=" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\lambda&space;}^2&space;-5&space;{\lambda}&space;-&space;14&space;=" title="{\lambda }^2 -5 {\lambda} - 14 =" /></a> = <br />
+<a href="https://www.codecogs.com/eqnedit.php?latex={\lambda&space;}^2&space;-5&space;{\lambda}&space;-&space;14&space;=" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\lambda&space;}^2&space;-5&space;{\lambda}&space;-&space;14&space;=" title="{\lambda }^2 -5 {\lambda} - 14 =" /></a> <br />
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=({\lambda&space;}&space;&plus;&space;2)({\lambda}&space;-&space;7)&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?({\lambda&space;}&space;&plus;&space;2)({\lambda}&space;-&space;7)&space;=&space;0" title="({\lambda } + 2)({\lambda} - 7) = 0" /></a>
 
@@ -71,7 +71,9 @@ From here we can set <a href="https://www.codecogs.com/eqnedit.php?latex=x_{2}&s
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=x_{1}&space;=&space;2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x_{1}&space;=&space;2" title="x_{1} = 2" /></a>
 
-So or first eigenvector is <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;2&space;\\&space;1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;2&space;\\&space;1&space;\end{bmatrix}" title="\begin{bmatrix} 2 \\ 1 \end{bmatrix}" /></a>
+So or first eigenvector is <br />
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;2&space;\\&space;1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;2&space;\\&space;1&space;\end{bmatrix}" title="\begin{bmatrix} 2 \\ 1 \end{bmatrix}" /></a>
 
 We can normalize this vector <a href="https://www.codecogs.com/eqnedit.php?latex=x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x" title="x" /></a> by dividing <a href="https://www.codecogs.com/eqnedit.php?latex=x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x" title="x" /></a> by the square root of <a href="https://www.codecogs.com/eqnedit.php?latex=x^{t}x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x^{t}x" title="x^{t}x" /></a>; that is, <a href="https://www.codecogs.com/eqnedit.php?latex=x/\sqrt{x^{t}x}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x/\sqrt{x^{t}x}" title="x/\sqrt{x^{t}x}" /></a>. We can compare what we've calculated to base R with the "eigen" function.
 
@@ -113,7 +115,7 @@ A%*%matrix(c(2,1),nrow=2)
 
 ### **Eigenvector Number 2**
 
-We will simply repeat the steps above with our second eigenvalue. We'll move on to \\(λ \\) = −2
+We will simply repeat the steps above with our second eigenvalue. We'll move on to <a href="https://www.codecogs.com/eqnedit.php?latex={\lambda}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?{\lambda}" title="{\lambda}" /></a> = −2
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;6&space;&6&space;\\&space;3&&space;3&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;6&space;&6&space;\\&space;3&&space;3&space;\end{bmatrix}" title="\begin{bmatrix} 6 &6 \\ 3& 3 \end{bmatrix}" /></a>
 
@@ -135,9 +137,10 @@ From here we can set <a href="https://www.codecogs.com/eqnedit.php?latex=x_{2}&s
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=1x_{1}&space;=&space;-1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1x_{1}&space;=&space;-1" title="1x_{1} = -1" /></a> thus:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=1x_{1}&space;=&space;-1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1x_{1}&space;=&space;-1" title="1x_{1} = -1" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=x_{1}&space;=&space;-1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?1x_{1}&space;=&space;-1" title="1x_{1} = -1" /></a>
 
-So or second eigenvector is <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;-1\\1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;-1\\1&space;\end{bmatrix}" title="\begin{bmatrix} -1\\1 \end{bmatrix}" /></a>
+So or second eigenvector is <br />
+ <a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;-1\\1&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;-1\\1&space;\end{bmatrix}" title="\begin{bmatrix} -1\\1 \end{bmatrix}" /></a>
 
 We can perform the same set of checks we did above to ensure our calculations are correct.
 
