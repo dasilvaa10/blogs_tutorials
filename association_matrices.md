@@ -149,4 +149,4 @@ my_fun(dat, type = "cosine")
     ## [3,] 0.7934723 0.7595715 1.0000000 0.8174331
     ## [4,] 0.7746084 0.7651368 0.8174331 1.0000000
 
-Now you're prepared if you're ever in a weird scenario needing to come up with these measures on the fly!  More importantly, you now hopefully have a more intiuitive understanding of how a few types of pariwise associations could be derived.
+Now you're prepared if you're ever in a weird scenario needing to come up with these measures on the fly!  More importantly, you now hopefully have a more intiuitive understanding of how a few types of pairwise associations could be derived.
